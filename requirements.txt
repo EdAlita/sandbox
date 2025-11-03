@@ -1,0 +1,15 @@
+tqdm
+matplotlib
+numpy
+torch
+yacs
+scikit-image
+torchvision
+nibabel
+torchsummary
+pprintpp
+tensorboard
+kornia
+h5py
+scikit-learn
+torchio

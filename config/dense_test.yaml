@@ -1,0 +1,35 @@
+MODEL:
+  MODEL_NAME: "DenseNet"
+  LOSS_FUNC: "combined"
+  NUM_FILTERS_INTERPOL: 16
+  N_CLASSES: 2
+  NUM_CHANNELS: 7
+  KERNEL_H: 3
+  KERNEL_W: 3
+  BLOCK_CONFIG: (4, 5, 7, 10, 12)
+  DROP_OUT_RATE: 0.2
+  NUM_FILTERS: 15
+
+TRAIN:
+  BATCH_SIZE: 8
+  LOG_INTERVAL: 5
+  RESUME: False
+  NUM_EPOCHS: 10
+
+DATA_LOADER:
+  NUM_WORKERS: 8
+  PIN_MEMORY: True
+
+OPTIMIZER:
+  OPTIMIZING_METHOD : 'adam'
+  WEIGHT_DECAY : 1e-4
+  BASE_LR : 0.0007
+  LR_SCHEDULER : 'multiStep'
+  GAMMA: 0.1
+  MILESTONE: [500, 1000]
+
+NUM_GPUS: 1
+LOG_DIR: "/mnt/c/Users/edyA0/Proyectos/sandbox/trainning/experiments"
+EXPR_NUM: "20tensense_densenet"
+RNG_SEED: 1
+SUMMARY_PATH: "/mnt/c/Users/edyA0/Proyectos/sandbox/trainning/summary/20tensense_densenet"
